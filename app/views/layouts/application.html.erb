@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>RailsYelpMvp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +12,15 @@
   </head>
 
   <body>
+      <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between align-items-center pl-5 pr-5" style="background-color: #e3f2fd;">
+        <div>
+          <a class="navbar-brand text-decoration-none" href="<%= restaurants_path %>">Restaurants</a>
+          <%#= link_to 'Restaurants', restaurants_path, class:'navbar-brand text-decoration-none' %>
+        </div>
+        <div>
+          <%= link_to 'Add a restaurant', new_restaurant_path, class:'text-decoration-none'%>
+        </div>
+      </nav>
     <%= yield %>
   </body>
 </html>
